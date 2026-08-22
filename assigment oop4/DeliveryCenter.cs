@@ -13,6 +13,13 @@ namespace assigment_oop4
         {
             shipments.Add(shipment);
         }
+        public void PrintTrackingStatuses()
+        {
+            foreach (ITrackable t in shipments)
+            {
+                Console.WriteLine(t.GetTrackingStatus());
+            }
+        }
 
         public void RemoveShipment(Shipment shipment)
         {
@@ -26,6 +33,8 @@ namespace assigment_oop4
                 shipment.PrintShipment();
                 Console.WriteLine(new string('-', 55));
             }
+
         }
+
     }
 }
